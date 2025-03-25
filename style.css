@@ -15,6 +15,10 @@ html {
     overflow-x: hidden;
 }
 
+section {
+    padding: 2rem 9%;
+}
+
 header {
     position: fixed;
     top: 0; left: 0; right: 0;
@@ -68,15 +72,31 @@ header .fa-bars {
     display: none;
 }
 
+.home {
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    color: white;
+    background: url(DesignSite.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
 
+.home .content {
+    max-width: 50rem; 
+}
 
+.home .content h3 {
+    font-size: 6rem;
+    color: white;
+}
 
-
-
-
-
-
-
+.home .content span {
+    font-size: 3rem;
+    color: whitesmoke;
+    padding: 1rem 0;
+    line-height: 1.5;
+}
 
 
 
@@ -98,7 +118,7 @@ header .fa-bars {
 
 
 /* media queries */
-@media (max-widht:991px){
+@media (max-width: 991px) {
 
     html {
         font-size: 55%;
@@ -110,9 +130,9 @@ header .fa-bars {
 
 }
 
-@media (max-widht:768px){
+@media (max-width: 768px) {
 
-   html .fa-bars{
+   header .fa-bars{
         display: block;
    } 
 
@@ -121,23 +141,28 @@ header .fa-bars {
         top: 100%; left: 0; right: 0;
         background: black;
         border-top: .1rem solid rgb(230, 230, 230);
-        clip-path:polygon(0 0,100% 0, 100% 100%,0% 100%);
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0); /* Esconde o menu */ 
    }
 
    header #toggler:checked ~ .navbar{
-        clip-path:polygon(0 0,100% 0, 100% 100%,0% 100%);
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); /* Mostra o menu */
    }
 
    header .navbar a{
         margin: 1.5rem;
         padding: 1.5rem;
-        background: white;
+        background: rgb(0, 0, 0);
         border: .1rem solid rgb(230, 230, 230);
         display: block;
    }
 
 }
 
-@media (max-widht:450px){
-    font-size: 55%;
+@media (max-width: 450px) {
+
+    html {
+        font-size: 45%;
 }
+}
+
+/* media queries ends*/
